@@ -5,4 +5,4 @@ import axios from "axios";
        baseURL : "https://api.themoviedb.org/3"
   });
 
-export default instanace;
+export default instance;
