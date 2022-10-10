@@ -24,8 +24,11 @@
 }
 
 .rowPoster_large{
-    max-height: 250px;
+    max-height: 250%;
 }
 .rowPoster_large:hover{
  transform: scale(1.10) ;
+}
+.app{
+margin-left: 20px;
 }
