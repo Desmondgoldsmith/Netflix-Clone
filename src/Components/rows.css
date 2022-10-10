@@ -22,3 +22,10 @@
 .row_poster:hover{
     transform: scale(1.08);
 }
+
+.rowPoster_large{
+    max-height: 250px;
+}
+.rowPoster_large:hover{
+ transform: scale(1.10) ;
+}

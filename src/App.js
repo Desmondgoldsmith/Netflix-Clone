@@ -5,7 +5,8 @@ function App() {
   return (
     <div className="App">
       <h1>Big head !</h1>
-       <Rows title = "Netflix Originals" fetchURL = {request.fetchNetflixOriginals} />
+       <Rows title = "Netflix Originals" fetchURL = {request.fetchNetflixOriginals}   
+        isLargeRow />
        <Rows title = "Trending Now " fetchURL = {request.fetchTrending}/>
        <Rows title = "Top Rated " fetchURL = {request.fetchNetflixOriginals}/>
        <Rows title = "Action Movies " fetchURL = {request.fetchActionMovies}/>
