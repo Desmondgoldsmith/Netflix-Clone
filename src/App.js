@@ -7,6 +7,12 @@ function App() {
       <h1>Big head !</h1>
        <Rows title = "Netflix Originals" fetchURL = {request.fetchNetflixOriginals} />
        <Rows title = "Trending Now " fetchURL = {request.fetchTrending}/>
+       <Rows title = "Top Rated " fetchURL = {request.fetchNetflixOriginals}/>
+       <Rows title = "Action Movies " fetchURL = {request.fetchActionMovies}/>
+       <Rows title = "Comedy Movies " fetchURL = {request.fetchComedyMovies}/>
+       <Rows title = "Horror Moivies " fetchURL = {request.fetchHorrorMovies}/>
+       <Rows title = "Romance Moivies " fetchURL = {request.fetchRomanceMovies}/>
+       <Rows title = "Documentaries " fetchURL = {request.fetchDocumentaries}/>
     </div>
   );
 }
