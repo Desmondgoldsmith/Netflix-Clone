@@ -1,6 +1,7 @@
 import axios from '../axios';
 import React, { useEffect, useState } from 'react'
 import requests from '../request';
+const base_url = "https://image.tmdb.org/t/p/original/";
 
 function Banner() {
     const [movies,setMovies] = useState([]);
@@ -12,13 +13,24 @@ function Banner() {
             ]);
         }
         fetchData();
-    })
+    },[])
   return (
-    <header className='Banner_header'>
-      {/* {Banner header} */}
-      <h1>Banner Header</h1>
+    <header className='Banner' 
+    style={{backgroundSize: "cover",
+            backgroundImage: `url("${base_url}${movies?.backdrop_path}")`,
+           backgroundPosition : "center center",
+    }}
+    >
+     <div className='Banner_content'>
+         {/* {Banner header} */}
+      <h1>{
+         movies?.title || movies?.name || movies.original_name
+      }</h1>
+      {}
       {/* {2 buttons} */}
       {/* description */}
+     </div>
+     
     </header>
   )
 }
