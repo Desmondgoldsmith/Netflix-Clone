@@ -1,7 +1,6 @@
 import axios from '../axios';
 import React, { useEffect, useState } from 'react'
 import './rows.css';
-import { string } from 'mathjs';
 
  const base_url = "https://image.tmdb.org/t/p/original/";
  function Rows({title,fetchURL,isLargeRow }) {

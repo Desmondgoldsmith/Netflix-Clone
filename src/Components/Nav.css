@@ -3,7 +3,6 @@
     top:0;
     display: flex;
     padding: 20px;
-    background-color: #111;
     width: 100%;
     z-index: 1;
 }
@@ -11,4 +10,9 @@
 .nav_logo{
     width: 80px;
     object-fit: contain;
+}
+
+.black_nav{
+    background-color: #111;
+
 }
