@@ -4,7 +4,7 @@ import Rows from './Components/Rows';
 import request from './request';
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Banner />
        <Rows title = "Netflix Originals" fetchURL = {request.fetchNetflixOriginals}   
         isLargeRow />

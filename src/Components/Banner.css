@@ -24,3 +24,32 @@
     max-width: 360px;
     height: 180px;
 }
+
+.banner_buttons{
+    cursor: pointer;
+    color:#fff;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1em;
+    padding-top: 0.5em;
+    background-color: rgba(51,51,51,0.5);
+    padding-bottom: 00.5em;
+}
+
+.banner_buttons:hover{
+    color : #000;
+    background-color: gray;
+    transition: all 0.2s;
+}
+
+.banner_fade_bottom{
+    height: 7.4rem;
+    background-image: linear-gradient(180deg,
+    transparent,
+    rgba(37,37,37,0.61),
+    #111);
+}
