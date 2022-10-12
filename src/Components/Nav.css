@@ -5,6 +5,8 @@
     padding: 20px;
     width: 100%;
     z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
 }
 
 .nav_logo{

@@ -1,6 +1,7 @@
 import axios from '../axios';
 import React, { useEffect, useState } from 'react'
 import './rows.css';
+import YouTube from 'react-youtube';
 
  const base_url = "https://image.tmdb.org/t/p/original/";
  function Rows({title,fetchURL,isLargeRow }) {
@@ -27,8 +28,11 @@ import './rows.css';
          key={movie.id} 
          src = {`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`} 
          alt = {movie.name} /> 
+        
     ))}
+    
     </div>
+    <YouTube videoId='trailerUrl' opts={opts}/>
     </div>
     
     )
