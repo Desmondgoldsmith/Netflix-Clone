@@ -17,6 +17,13 @@ import YouTube from 'react-youtube';
         fetchData();
        
      },[fetchURL]);
+     const opt = {
+        height : "360",
+        width  : "100px",
+        playerVars:{
+          autoplay:1,
+        } 
+     }
     
     // console.log(movies);
     return (
