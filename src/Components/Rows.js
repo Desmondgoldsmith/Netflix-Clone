@@ -33,15 +33,20 @@ import YouTube from 'react-youtube';
     <h2>{title}</h2>
     <div className={'row_posters'}>
     {movies.map(movie=>(
-        <img className={`row_poster ${isLargeRow && 'rowPoster_large'}`}
+        <img
+         className={
+            `row_poster ${isLargeRow && 'rowPoster_large'}`
+            }
          key={movie.id} 
+         onClick={()=>handleClick(movies)}
+
          src = {`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`} 
          alt = {movie.name} /> 
         
     ))}
     
     </div>
-    <YouTube videoId='trailerUrl' opts={opts}/>
+    {trailerUrl && <YouTube videoId='trailerUrl' opts={opts}/>}
     </div>
     
     )
