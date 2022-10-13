@@ -17,7 +17,7 @@ import YouTube from 'react-youtube';
         fetchData();
        
      },[fetchURL]);
-     const opt = {
+     const opts = {
         height : "360",
         width  : "100px",
         playerVars:{
