@@ -6,6 +6,8 @@ import YouTube from 'react-youtube';
  const base_url = "https://image.tmdb.org/t/p/original/";
  function Rows({title,fetchURL,isLargeRow }) {
     const [movies,setMovies] = useState([]);
+    const [trailerUrl,setTrailerUrl] = useState("");
+
     //using the useEffect property to make a request to TMDB to pull the movies on reload.
      useEffect(()=>{
         async function fetchData(){
