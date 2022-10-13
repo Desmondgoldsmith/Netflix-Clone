@@ -2,11 +2,11 @@ import axios from '../axios';
 import React, { useEffect, useState } from 'react'
 import './rows.css';
 import YouTube from 'react-youtube';
+import movieTrailer from 'movie-trailer';
 
  const base_url = "https://image.tmdb.org/t/p/original/";
  function Rows({title,fetchURL,isLargeRow }) {
     const [movies,setMovies] = useState([]);
-    const [trailerUrl,setTrailerUrl] = useState("");
 
     //using the useEffect property to make a request to TMDB to pull the movies on reload.
      useEffect(()=>{
@@ -19,14 +19,8 @@ import YouTube from 'react-youtube';
         fetchData();
        
      },[fetchURL]);
-     const opts = {
-        height : "360",
-        width  : "100px",
-        playerVars:{
-          autoplay:1,
-        } 
-     }
-    
+     
+  
     // console.log(movies);
     return (
     <div className='row'>
@@ -37,19 +31,16 @@ import YouTube from 'react-youtube';
          className={
             `row_poster ${isLargeRow && 'rowPoster_large'}`
             }
-         key={movie.id} 
-         onClick={()=>handleClick(movies)}
 
+         key={movie.id} 
          src = {`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`} 
          alt = {movie.name} /> 
         
     ))}
     
     </div>
-    {trailerUrl && <YouTube videoId='trailerUrl' opts={opts}/>}
     </div>
     
     )
 }
-
 export default Rows;
